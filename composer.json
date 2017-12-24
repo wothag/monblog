@@ -1,0 +1,15 @@
+{
+  "name": "wothag/monblog",
+  "description": "blog forteroche",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "David Hagnere",
+      "email": "d.r.c.hagnere@gmail.com.com"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "^6.5"
+  }
+}
