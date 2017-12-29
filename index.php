@@ -16,4 +16,4 @@ $Bd=new BdManager();
 
 
 
-echo'la valeur est'.(Chapter:getId()).;
+echo'la valeur est'.($Chapter->getId());
