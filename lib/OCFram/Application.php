@@ -15,6 +15,9 @@ abstract class Application
 	protected $httpResponse;
 	protected $name;
 
+	/**
+	 * Application constructor.
+	 */
 	public function __construct()
 	{
 		$this->httpRequest = new HTTPRequest;
@@ -22,6 +25,9 @@ abstract class Application
 		$this->name = '';
 	}
 
+	/**
+	 * @return mixed
+	 */
 	public function getController()
 	{
 		$router = new Router;
