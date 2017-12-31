@@ -1,12 +1,12 @@
 <?php
 
-use OCFram\ApplicationComponent;
+namespace OCFram;
 
 /**
  * Created by PhpStorm.
  * User: drcha
  * Date: 30/12/2017
- * Time: 17:52
+ * Time: 19:52
  */
 
 

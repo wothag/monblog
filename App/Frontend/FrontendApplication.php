@@ -7,9 +7,10 @@
  */
 
 
+
 namespace App\Frontend;
 
-	use \OCFram\Application;
+use \OCFram\Application;
 
 class FrontendApplication extends Application
 {

@@ -6,6 +6,8 @@
  * Time: 01:46
  */
 
+namespace OCFram;
+
 class BackController extends ApplicationComponent
 {
 	protected $action = '';
