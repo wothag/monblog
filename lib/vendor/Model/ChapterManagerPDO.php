@@ -7,7 +7,7 @@
  */
 
 
-class BdManager
+class ChapterManagerPDO
 {
 	protected function dbConnect()
 	{

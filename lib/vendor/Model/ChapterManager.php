@@ -6,7 +6,7 @@
  * Time: 19:14
  */
 
-class ChapterManager extends BdManager
+class ChapterManager extends ChapterManagerPDO
 {
 	/**
 	 *

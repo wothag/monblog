@@ -6,7 +6,7 @@
  * Time: 14:31
  */
 
-namespace App\Frontend;
+namespace OCFram;
 
 
 	class Page extends ApplicationComponent
