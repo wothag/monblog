@@ -47,7 +47,7 @@ namespace OCFram;
 			$content = ob_get_clean();
 
 			ob_start();
-			require __DIR__.'/../../App/'.$this->app->name().'/Templates/layout.php';
+			require __DIR__.'/../../App/Frontend/Modules/Templates/layout.php';
 			return ob_get_clean();
 		}
 

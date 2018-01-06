@@ -117,7 +117,7 @@ class Chapter
 		return $this->date_created;
 	}
 
-	public function getDatemodified()
+	public function getDate_modified()
 	{
 		return $this->date_modified;
 	}

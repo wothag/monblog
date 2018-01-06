@@ -5,8 +5,10 @@
  * Date: 02/01/2018
  * Time: 18:03
  */
+use \OCFram\Entity;
+class Chapter extends Entity
 
-class Chapter
+
 {
 	protected $id;
 	protected $author;
@@ -30,26 +32,6 @@ class Chapter
 	public function isValid()
 	{
 		return !(empty($this->author) || empty($this->title) || empty($this->content));
-	}
-
-	public function __construct($valeurs = [])
-	{
-		if (!empty($valeurs)) {
-			$this->hydrate($valeurs);
-			Echo 'construction ok';
-		}
-		return ($valeurs);
-	}
-
-	public function hydrate($donnees)
-	{
-		foreach ($donnees as $attribute => $value) {
-			$method = 'set' . ucfirst($attribute);
-			if (is_callable([$this, $method])) {
-				$this->$method($value);
-			}
-		}
-		echo 'ok';
 	}
 
 
