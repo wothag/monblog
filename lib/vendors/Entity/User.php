@@ -7,21 +7,17 @@
  */
 
 
-namespace Entity;
+namespace vendors\Entity;
+
 use \OCFram\Entity;
 class Users extends Entity
 {
 
 	protected $id;
-
 	protected $username;
-
 	protected $email;
-
 	protected $password;
-
 	protected $inscription;
-
 	protected $role;
 
 	const INVALID_USERNAME = 1;
@@ -33,7 +29,7 @@ class Users extends Entity
 
 	public function isValid()
 	{
-		return !(empty($this->username) || empty($this->password) || empty($this->salt) || empty($this->role));
+		return !(empty($this->username) || empty($this->password) || empty($this->role));
 	}
 
 

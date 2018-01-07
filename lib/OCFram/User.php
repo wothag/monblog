@@ -8,6 +8,8 @@
 
 namespace OCFram;
 session_start();
+
+
 class User extends ApplicationComponent
 {
 	/**

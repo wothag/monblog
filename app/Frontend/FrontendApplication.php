@@ -8,7 +8,7 @@
 
 
 
-namespace App\Frontend;
+namespace app\Frontend;
 
 use \OCFram\Application;
 

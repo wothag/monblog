@@ -77,14 +77,6 @@ class HTTPRequest extends ApplicationComponent
 	/**
 	 * @return mixed
 	 */
-	public function method()
-	{
-		return $_SERVER['REQUEST_METHOD'];
-	}
-
-	/**
-	 * @return mixed
-	 */
 	public function requestURI()
 	{
 		return $_SERVER['REQUEST_URI'];

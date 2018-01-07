@@ -13,11 +13,8 @@
     <nav>
         <div>
             <div>
-                <button type="button">
-                </button>
-            </div>
-            <div
-                    <li><a href="/"Home</a></li>
+                <ul>
+                    <li><a href="/">Home</a></li>
                     <li><a href="#">Chapitres </a></li>
                         <ul>
                             <li><a href="/chapters/last.html">Les derniers chapitres publiée</a></li>
@@ -25,7 +22,7 @@
                         </ul>
                 <ul>
 
-            /* <?php if ($user->isAdmin()) : ?>
+             <?php if ($user->isAdmin()) : ?>
 
                         <li><a href="/admin/home.html">Administration</a></li>
 
