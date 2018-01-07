@@ -11,16 +11,19 @@ namespace OCFram;
 
 abstract class Entity implements \ArrayAccess
 {
-	protected $errors = [],
-		$id;
+	use Hydrator;
 
-	public function __construct(array $donnees = [])
+	protected $errors = [];
+	protected $id;
+
+	public function __construct($donnees = [])
 	{
 		if (!empty($donnees))
 		{
 			$this->hydrate($donnees);
 		}
 	}
+
 
 	public function isNew()
 	{

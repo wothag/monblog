@@ -72,7 +72,7 @@
     <div>
         <footer>
             <p>
-                <a Ce blog est un test !</a>
+                <a> Ce blog est un test !</a>
             </p>
         </footer>
     </div>

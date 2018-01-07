@@ -48,7 +48,7 @@ class Router
 						}
 					}
 
-					// On assigne ce tableau de variables � la route
+					// On assigne ce tableau de variables à la route
 					$route->setVars($listVars);
 				}
 

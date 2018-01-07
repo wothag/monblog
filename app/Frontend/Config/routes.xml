@@ -1,29 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <routes>
-    <!--Accueil-->
-
     <route url="/" module="Chapters" action="home" />
-
-    <!-- One Chapter (id) -->
-
     <route url="/chapters/chapter-([0-9]+)\.html" module="Chapters" action="show" vars="id"/>
-
-    <!--All Chapters -->
-
-    <route url="/chapters/all.html" module="Chapters" action="all" />
-
-    <!--last 5 Chapters-->
-
-    <route url="/chapters/last.html" module="Chapters" action="last" />
-
-    <!-- ******* ### MODULE COMMENTS ### ******** -->
-
-    <!-- Insert Comments-->
-
     <route url="/comments/insert-comment-([0-9]+)\.html" module="Comments" action="insert" vars="id" />
-
-    <!-- tag=> Comments-->
-
     <route url="/comments/flag-comment-([0-9]+)\.html" module="Comments" action="flag" vars="id" />
-
-</routes>
+    <route url="/chapters/all.html" module="Chapters" action="all" />
+    <route url="/chapters/last.html" module="Chapters" action="last" />
+  </routes>

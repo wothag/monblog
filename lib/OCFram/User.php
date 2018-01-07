@@ -8,7 +8,7 @@
 
 namespace OCFram;
 session_start();
-class User
+class User extends ApplicationComponent
 {
 	/**
 	 * @param $attr
@@ -40,19 +40,42 @@ class User
 	/**
 	 * @return bool
 	 */
+
+	public function isAuthenticated()
+	{
+		return isset( $_SESSION[ 'auth' ] ) && $_SESSION[ 'auth' ] === true;
+	}
+
+	/**
+	 * @return bool
+	 */
 	public function isAdmin()
 	{
-		return isset($_SESSION['admin']) && $_SESSION['admin'] === true;
+		if ($this->isAuthenticated()) {
+			if (isset($_SESSION['auth']) && $_SESSION['auth'] === true && isset($_SESSION['role']) && $_SESSION['role'] === 'ADMIN') {
+				return true;
+			} else {
+				return false;
+			}
+		}
 	}
+
+
 
 	/**
 	 * @return bool
 	 */
 	public function isUser()
 	{
-		return isset($_SESSION['user']) && $_SESSION['user'] === true;
+		if( isset( $_SESSION[ 'auth' ] ) && $_SESSION[ 'auth' ] === true && isset( $_SESSION[ 'role' ] ) && $_SESSION[ 'role' ] === 'USER' )
+			{
+				return true;
+			}
+		else
+			{
+				return false;
+			}
 	}
-
 	/**
 	 * @param $attr
 	 * @param $value
@@ -61,6 +84,18 @@ class User
 	{
 		$_SESSION[$attr] = $value;
 	}
+
+	public function setAuthenticated( $authenticated )
+	{
+		if( $authenticated == false ) {
+			$_SESSION[ 'auth' ] = $authenticated;
+			$_SESSION[ 'role' ] = '';
+		}
+		if( $authenticated == true ) {
+			$_SESSION[ 'auth' ] = $authenticated;
+		}
+	}
+
 
 	/**
 	 * @param $admin

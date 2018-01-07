@@ -49,6 +49,14 @@ class HTTPRequest extends ApplicationComponent
 	}
 
 	/**
+	 * @return mixed
+	 */
+	public function method()
+	{
+		return $_SERVER['REQUEST_METHOD'];
+	}
+
+	/**
 	 * @param $key
 	 * @return null
 	 */
