@@ -6,10 +6,10 @@
  * Time: 02:56
  */
 
-
-namespace vendors\Entity;
+namespace Entity;
 
 use \OCFram\Entity;
+
 class Users extends Entity
 {
 
@@ -20,6 +20,7 @@ class Users extends Entity
 	protected $inscription;
 	protected $role;
 
+
 	const INVALID_USERNAME = 1;
 	const INVALID_PASSWORD = 2;
 	const INVALID_ROLE = 3;
@@ -27,11 +28,11 @@ class Users extends Entity
 	const INVALID_EMAIL = 5;
 	const INVALID_INSCRIPTION = 6;
 
+
 	public function isValid()
 	{
 		return !(empty($this->username) || empty($this->password) || empty($this->role));
 	}
-
 
 	public function id()
 	{
@@ -58,7 +59,7 @@ class Users extends Entity
 	{
 		return $this->inscription;
 	}
-
+	// SETTERS //
 	public function setId($id)
 	{
 		if (is_integer($id) && $id > 0) {
@@ -94,7 +95,7 @@ class Users extends Entity
 		}
 		$this->role = $role;
 	}
-	public function setInscription( \DateTime $inscription)
+	public function setInscription($inscription)
 	{
 		if( !empty( $inscription ) ) {
 			$this->inscription = $inscription;

@@ -8,6 +8,7 @@
 
 
 namespace Form\Field;
+
 abstract class Field
 {
 
@@ -16,6 +17,7 @@ abstract class Field
 
 	protected $errorMessage;
 	protected $label;
+	protected $length;
 	protected $name;
 	protected $value;
 	protected $class;
